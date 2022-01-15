@@ -1,18 +1,14 @@
 function lastK(n, k) {
-  const result = [];
+  let result = [1];
 
-  for (let i = 1; i <= n; i++) {
-    
-    if (result.length <= 1) {
-      result.push(1);
-    }
-    if (result.length == 2) {
-      result.push(result[0] + result[1]);
-    }
-    if(result.length < k){
-        result.push(result[1] + k)
-    }
+  for (let i = 1; i < n; i++) {
+    let startIndex = Math.max(0, i - k);
+    let currentElement = result
+      .slice(startIndex, startIndex + k)
+      .reduce((a, b) => a + b, 0);
+    result.push(currentElement);
   }
-  console.log(result);
+  return result;
+  //console.log(result);
 }
 lastK(6, 3);
