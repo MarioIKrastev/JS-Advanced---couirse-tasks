@@ -14,15 +14,20 @@ function equalNeighbors(input) {
   }, 0);
   return result;
 }
-equalNeighbors([
-  ["2", "3", "4", "7", "0"],
-  ["4", "0", "5", "3", "4"],
-  ["2", "3", "5", "4", "2"],
-  ["9", "8", "7", "5", "4"],
-]);
-console.log("------------------");
-equalNeighbors([
-  ["test", "yes", "yo", "ho"],
-  ["well", "done", "yo", "6"],
-  ["not", "done", "yet", "5"],
-]);
+// -=-=-=-=-=-=-=-=-=-=-SecondResolution-=-=-=-=-=-=-=-=-=-=-
+/*
+function equal(input) {
+  let neighbors = 0;
+
+  for (let i = 0; i < input.length; i++) {
+    const currentLine = input[i];
+    for (let k = 0; k < currentLine.length; k++) {
+      const currentItem = currentLine[k];
+      currentItem === currentLine[k + 1] ? (neighbors += 1) : neighbors;
+      currentItem === (input[i + 1] || [])[k] ? (neighbors += 1) : neighbors;
+    }
+    // console.log(currentLine[i]);
+  }
+  return neighbors;
+}
+*/
