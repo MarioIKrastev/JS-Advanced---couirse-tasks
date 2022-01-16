@@ -2,12 +2,8 @@ function equalNeighbors(input) {
 
   const result = input.reduce((acc, arrLine, arrLineItem) => {
     const counter = arrLine.reduce((acc, lineItem, arrLineIndex) => {
-      if (lineItem === arrLine[arrLineIndex + 1]) {
-        acc += 1;
-      }
-      if (lineItem === (input[arrLineItem + 1] || [])[arrLineIndex]) {
-        acc += 1;
-      }
+      lineItem === arrLine[arrLineIndex + 1]) ? acc += 1 : acc;
+      lineItem === (input[arrLineItem + 1] || [])[arrLineIndex]) ? acc += 1 : acc;
       return acc;
     }, 0);
     return acc + counter;
