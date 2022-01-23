@@ -7,5 +7,5 @@ function sumTable() {
     let number = +x.textContent;
     result += number;
   }
-  document.getElementById("sum").textContent += result;
+  document.getElementById("sum").textContent = result;
 }
