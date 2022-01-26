@@ -1,5 +1,4 @@
 function editElement(referal, match, replacer) {
-  const btnText = document.getElementById("btn");
   const input = referal.textContent;
   const matcher = new RegExp(match, "g");
   const edited = input.replace(matcher, replacer);
