@@ -5,8 +5,7 @@ function solve() {
 
 while(inputElement.length > 0){
   let pElement = document.createElement('p');
-  let textElements = inputElement.splice(0, 3).join('. ') + '.';
-  pElement.textContent = textElements;
+  pElement.textContent = inputElement.splice(0, 3).join('. ') + '.';
   outputElement.appendChild(pElement);
   }
 
